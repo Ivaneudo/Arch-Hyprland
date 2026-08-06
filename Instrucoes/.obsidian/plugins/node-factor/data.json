@@ -1,0 +1,12 @@
+{
+  "fwdMultiplier": 1,
+  "fwdTree": false,
+  "bwdMultiplier": 0,
+  "lettersPerWt": 0,
+  "manual": [
+    {
+      "id": "Estudos/Cursos_Online/Cursos Online.md",
+      "weight": 5
+    }
+  ]
+}

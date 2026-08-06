@@ -1,0 +1,78 @@
+{
+  "biggerIcons": "desktop",
+  "clickableIcons": "desktop",
+  "showAllFileIcons": true,
+  "showAllFolderIcons": true,
+  "minimalFolderIcons": true,
+  "showMarkdownTabIcons": true,
+  "showTitleIcons": true,
+  "showTagPillIcons": false,
+  "showMenuActions": true,
+  "showSuggestionIcons": false,
+  "showQuickSwitcherIcons": true,
+  "showMoveFileIcons": true,
+  "showItemName": "desktop",
+  "biggerSearchResults": "mobile",
+  "maxSearchResults": 50,
+  "colorPicker1": "rgb",
+  "colorPicker2": "rgb",
+  "uncolorHover": true,
+  "uncolorDrag": true,
+  "uncolorSelect": true,
+  "uncolorQuick": true,
+  "maxBackups": 2,
+  "dialogState": {
+    "iconMode": true,
+    "emojiMode": true,
+    "rulePage": "file"
+  },
+  "appIcons": {},
+  "tabIcons": {},
+  "fileIcons": {
+    "/": {
+      "icon": "lucide-book-open"
+    },
+    "Main/Anotações Rapidas": {
+      "icon": "lucide-notepad-text-dashed"
+    },
+    "Main/Estudos": {
+      "icon": "lucide-pen"
+    },
+    "Main/Estudos/Literatura": {
+      "icon": "lucide-book-open"
+    },
+    "Main/Estudos/Tecnologias": {
+      "icon": "lucide-laptop-2"
+    },
+    "Main/Estudos/Tecnologias/Docker": {
+      "icon": "lucide-container"
+    },
+    "Main/Estudos/Tecnologias/Git": {
+      "icon": "lucide-git-merge"
+    },
+    "Main/Estudos/Tecnologias/Keycloak": {
+      "icon": "lucide-key-round"
+    },
+    "Main/Estudos/Tecnologias/Linguagem": {
+      "icon": "lucide-code-2"
+    },
+    "Main/Estudos/Tecnologias/Linguagem/Java": {
+      "icon": "lucide-coffee"
+    },
+    "Main/Estudos/Tecnologias/Linux": {
+      "icon": "🐧"
+    },
+    "Main/Estudos/Tecnologias/Linux/Homebrew": {
+      "icon": "🍺"
+    },
+    "Main/Metas": {
+      "icon": "lucide-notebook-text"
+    }
+  },
+  "bookmarkIcons": {},
+  "tagIcons": {},
+  "propertyIcons": {},
+  "ribbonIcons": {},
+  "fileRules": [],
+  "folderRules": []
+}
