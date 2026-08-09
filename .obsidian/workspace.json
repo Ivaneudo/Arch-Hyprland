@@ -4,38 +4,63 @@
     "type": "split",
     "children": [
       {
-        "id": "74378ab7ea426bcb",
+        "id": "4f3a736fdfea4e2b",
         "type": "tabs",
         "children": [
           {
-            "id": "dfe34a51c9c2ba1a",
+            "id": "1204bc893ed1b95a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Main/Estudos/Tecnologias/Linux/ArchLinux - Hyprland/Customização/Customização.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Customização"
-            }
-          },
-          {
-            "id": "9bb76ebeab9e85d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Main/Estudos/Tecnologias/Linux/ArchLinux - Hyprland/Pacotes-Padrão/Pacotes-Padrão.md",
+                "file": "Instrucoes/ArchLinux - Hyprland/Pacotes-Padrão/Pacotes-Padrão.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "Pacotes-Padrão"
             }
+          },
+          {
+            "id": "f429a8fce92ceebc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Readme.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Readme"
+            }
+          },
+          {
+            "id": "1265a2ffe5c99ab4",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+            }
+          },
+          {
+            "id": "9d65293f81164595",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Instrucoes/ArchLinux - Hyprland/Bibliografia.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Bibliografia"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,8 +122,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ae02062783e19a54",
@@ -191,8 +215,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           }
         ]
@@ -218,8 +242,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "dfe34a51c9c2ba1a",
+  "active": "f429a8fce92ceebc",
   "lastOpenFiles": [
+    "Instrucoes/ArchLinux - Hyprland/Pacotes-Padrão/Pacotes-Padrão.md",
+    "Instrucoes/ArchLinux - Hyprland/Bibliografia.md",
+    "Readme.md",
+    "Instrucoes/ArchLinux - Hyprland/Customização/Customização.md",
+    "README.md",
     "Main/Estudos/Tecnologias/Linux/ArchLinux - Hyprland/Pacotes-Padrão/Pacotes-Padrão.md",
     "Main/Estudos/Tecnologias/Linux/ArchLinux - Hyprland/Customização/Customização.md",
     "Main/Estudos/Tecnologias/Linux/Homebrew/🍺 Homebrew.md"
