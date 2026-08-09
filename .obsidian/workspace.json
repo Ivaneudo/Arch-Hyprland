@@ -59,8 +59,7 @@
               "title": "Bibliografia"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -242,11 +241,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "f429a8fce92ceebc",
+  "active": "1204bc893ed1b95a",
   "lastOpenFiles": [
+    "Readme.md",
     "Instrucoes/ArchLinux - Hyprland/Pacotes-Padrão/Pacotes-Padrão.md",
     "Instrucoes/ArchLinux - Hyprland/Bibliografia.md",
-    "Readme.md",
     "Instrucoes/ArchLinux - Hyprland/Customização/Customização.md",
     "README.md",
     "Main/Estudos/Tecnologias/Linux/ArchLinux - Hyprland/Pacotes-Padrão/Pacotes-Padrão.md",
