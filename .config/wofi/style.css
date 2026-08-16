@@ -1,0 +1,80 @@
+/* Wofi - Tema personalizado para combinar com o sistema */
+
+#window {
+    background-color: rgba(26, 20, 16, 0.95);
+    border-radius: 20px;
+    border: 2px solid rgba(196, 168, 130, 0.7);
+    padding: 30px;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    color: #c8b8a8;
+}
+
+#input {
+    background-color: rgba(42, 34, 28, 0.95);
+    color: #c8b8a8;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    caret-color: #c4a882;
+}
+
+#input:focus {
+    border: 2px solid #c4a882;
+    outline: none;
+}
+
+#inner-box {
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+#outer-box {
+    background: none;
+    border: none;
+    padding: 8px;
+}
+
+#scroll {
+    background: none;
+    border: none;
+    margin-top: 8px;
+}
+
+#entry {
+    background-color: rgba(42, 34, 28, 0.6);
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin: 6px 4px;
+    border: 2px solid transparent;
+}
+
+#entry:selected {
+    background-color: #3a3028;
+    color: #c4a882;
+    border: 2px solid #c4a882;
+}
+
+#entry:hover {
+    background-color: #3a3028;
+}
+
+#text {
+    color: #c8b8a8;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#entry:selected #text {
+    color: #c4a882;
+}
+
+#img {
+    margin-right: 14px;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 6px;
+}

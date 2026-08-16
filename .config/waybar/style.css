@@ -1,0 +1,342 @@
+/* ============================================
+   Tema Marrom - Fundo Transparente
+   Módulos com Fundo Marrom e Gaps
+   ============================================ */
+
+/* ---- Cores Base (Marrom) ---- */
+@define-color background #1a1410;
+@define-color module-bg #2a221c;        /* Fundo dos módulos */
+@define-color module-bg-hover #3a3028;   /* Fundo ao passar o mouse */
+@define-color primary #c4a882;
+@define-color primary_fixed #dcc8b0;
+@define-color secondary #b8a898;
+@define-color outline #8a7a6a;
+@define-color on_primary #2a1a0a;
+@define-color on_surface #f0e8e0;
+@define-color on_surface_variant #c8b8a8;
+@define-color inverse_surface #e8ddd0;
+@define-color error #ffb4ab;
+@define-color shadow #000000;
+
+/* ---- Estilos Globais ---- */
+* {
+    font-family: "JetBrainsMonoNL Nerd Font Propo", "JetBrainsMono Nerd Font Mono", "Noto Color Emoji";
+    font-weight: bold;
+    font-size: 100%;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+/* ---- Janela da Waybar (Fundo Totalmente Transparente) ---- */
+window#waybar {
+    background-color: transparent;
+    color: @on_surface;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    margin-top: 14px;  /* <<< AUMENTADO: abaixa a barra ~2mm */
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+window#waybar.empty {
+    background-color: transparent;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+/* ---- Tooltips ---- */
+tooltip {
+    color: @inverse_surface;
+    background: rgba(26, 20, 16, 0.95);
+    border-radius: 20px;
+    border: 1px solid @primary;
+}
+
+tooltip label {
+    color: @on_surface;
+}
+
+/* ---- Grupos de Módulos (Left, Center, Right) ---- */
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: transparent;
+    padding: 2px 4px;
+    margin: 0 2px;
+}
+
+/* ---- ESTILO DE CADA MÓDULO (COM FUNDO MARROM E GAPS) ---- */
+#backlight,
+#battery,
+#bluetooth,
+#clock,
+#custom-clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpd,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#custom-media,
+#custom-power,
+#custom-weather,
+#taskbar,
+#workspaces {
+    background-color: @module-bg;
+    color: @on_surface_variant;
+    padding: 4px 10px;
+    margin: 0 4px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* ---- Logo Arch Linux ---- */
+#custom-arch {
+    background-color: @module-bg;
+    color: #1793d1;                    /* <<< AZUL do Arch Linux */
+    font-size: 18px;
+    padding: 4px 12px;
+    margin: 0 4px;
+    margin-right: 8px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+#custom-arch:hover {
+    background-color: @module-bg-hover;
+    color: #4db8ff;                    /* Azul mais claro no hover */
+}
+
+/* ---- Relógio Custom (Sol/Lua) ---- */
+#custom-clock {
+    background-color: @module-bg;
+    color: @primary;
+    font-weight: bold;
+    padding: 4px 14px;
+    margin: 0 4px;
+    border-radius: 20px;
+}
+
+#custom-clock:hover {
+    background-color: @module-bg-hover;
+}
+
+/* ---- Efeito Hover nos Módulos ---- */
+#backlight:hover,
+#battery:hover,
+#bluetooth:hover,
+#clock:hover,
+#custom-clock:hover,
+#cpu:hover,
+#disk:hover,
+#idle_inhibitor:hover,
+#keyboard-state:hover,
+#memory:hover,
+#mode:hover,
+#mpd:hover,
+#network:hover,
+#power-profiles-daemon:hover,
+#pulseaudio:hover,
+#temperature:hover,
+#tray:hover,
+#window:hover,
+#wireplumber:hover,
+#custom-media:hover,
+#custom-power:hover,
+#custom-weather:hover,
+#taskbar:hover,
+#workspaces:hover {
+    background-color: @module-bg-hover;
+}
+
+/* ---- Workspaces (Estilo Especial) ---- */
+#workspaces {
+    background-color: @module-bg;
+    padding: 4px 6px;
+    margin: 0 4px;
+    border-radius: 20px;
+}
+
+#workspaces button {
+    color: @outline;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0 6px;
+    border-radius: 20px;
+    transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button:hover {
+    color: @primary;
+    background: rgba(196, 168, 130, 0.3);
+}
+
+#workspaces button.active {
+    color: @on_primary;
+    background-color: @primary;
+    padding: 0 12px;
+    border-radius: 20px;
+}
+
+#workspaces button.urgent {
+    color: @error;
+    background-color: rgba(255, 180, 171, 0.3);
+}
+
+/* ---- Cores Específicas por Tipo ---- */
+#clock {
+    color: @primary;
+    font-weight: bold;
+}
+
+#battery {
+    color: #a6e3a1;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #89b4fa;
+}
+
+#battery.critical:not(.charging) {
+    color: @error;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #ffffff;
+    }
+}
+
+#network {
+    color: #89b4fa;
+}
+
+#network.disconnected {
+    color: @error;
+}
+
+#pulseaudio {
+    color: #a6e3a1;
+}
+
+#pulseaudio.muted {
+    color: @error;
+}
+
+#temperature.critical {
+    color: @error;
+}
+
+#power-profiles-daemon.performance {
+    color: #f38ba8;
+}
+
+#power-profiles-daemon.balanced {
+    color: #f9e2af;
+}
+
+#power-profiles-daemon.power-saver {
+    color: #89b4fa;
+}
+
+#idle_inhibitor.activated {
+    color: #a6e3a1;
+}
+
+#custom-media {
+    color: #cba6f7;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    color: #1db954;
+}
+
+/* ---- Sliders (Backlight, Pulseaudio) ---- */
+#backlight-slider slider,
+#pulseaudio-slider slider {
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#backlight-slider trough,
+#pulseaudio-slider trough {
+    min-width: 80px;
+    min-height: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#backlight-slider highlight,
+#pulseaudio-slider highlight {
+    min-height: 10px;
+    border-radius: 5px;
+    background-color: @primary;
+}
+
+/* ---- Bandeja do Sistema (Tray) ---- */
+#tray {
+    padding: 4px 12px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @error;
+    border-radius: 10px;
+}
+
+/* ---- Modo (Submap) ---- */
+#mode {
+    color: @on_primary;
+    background-color: @primary;
+}
+
+/* ---- Janela Focada ---- */
+#window {
+    color: @primary_fixed;
+    font-weight: bold;
+}
+
+/* ---- Indicadores Específicos ---- */
+#custom-hypridle.notactive {
+    color: #39FF14;
+}
+
+/* ---- Margens e Ajustes Finais ---- */
+#workspaces {
+    margin: 0 2px;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
