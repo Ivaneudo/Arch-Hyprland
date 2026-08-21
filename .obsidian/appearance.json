@@ -3,7 +3,7 @@
   "interfaceFontFamily": "JetBrains Mono,JetBrains Mono NL",
   "textFontFamily": "JetBrains Mono",
   "monospaceFontFamily": "JetBrains Mono NL",
-  "baseFontSize": 14,
+  "baseFontSize": 17,
   "accentColor": "#72347f",
   "theme": "obsidian",
   "baseFontSizeAction": true
