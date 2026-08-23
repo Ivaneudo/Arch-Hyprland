@@ -1,7 +1,3 @@
-#TECNOLOGIA #LINUX
-
-# Guia de Configuração Arch Linux + Hyprland (Documentação Atualizada)
-
 ## Comandos básicos e caminhos
 
 |**Ação**|**Comando / Caminho**|
@@ -21,13 +17,13 @@
 sudo pacman -S hyprland kitty nano noto-fonts ttf-jetbrains-mono-nerd
 ```
 
-|**Pacote**|**Função**|
-|---|---|
-|`hyprland`|Gerenciador de janelas (Wayland)|
-|`kitty`|Terminal|
-|`nano`|Editor de texto básico|
-|`noto-fonts`|Fontes para emojis e fallback|
-|`ttf-jetbrains-mono-nerd`|Fonte principal com ícones|
+| **Pacote**                | **Função**                       |
+| ------------------------- | -------------------------------- |
+| `hyprland`                | Gerenciador de janelas (Wayland) |
+| `kitty`                   | Terminal                         |
+| `nano`                    | Editor de texto básico           |
+| `noto-fonts`              | Fontes para emojis e fallback    |
+| `ttf-jetbrains-mono-nerd` | Fonte principal com ícones       |
 
 ---
 
@@ -37,13 +33,13 @@ sudo pacman -S hyprland kitty nano noto-fonts ttf-jetbrains-mono-nerd
 sudo pacman -S nemo wofi eog mpv evince
 ```
 
-|**Pacote**|**Função**|
-|---|---|
-|`nemo`|Explorador de arquivos|
-|`wofi`|Lançador de aplicativos|
-|`eog`|Visualizador de imagens (Eye of GNOME)|
-|`mpv`|Reprodutor de vídeo e áudio|
-|`evince`|Visualizador de PDFs (padrão do GNOME)|
+| **Pacote** | **Função**                             |
+| ---------- | -------------------------------------- |
+| `nemo`     | Explorador de arquivos                 |
+| `wofi`     | Lançador de aplicativos                |
+| `eog`      | Visualizador de imagens (Eye of GNOME) |
+| `mpv`      | Reprodutor de vídeo e áudio            |
+| `evince`   | Visualizador de PDFs (padrão do GNOME) |
 
 ---
 
@@ -95,6 +91,33 @@ sudo pacman -S waybar pavucontrol
 ```bash
 sudo pacman -S adw-gtk3 xdg-desktop-portal xdg-desktop-portal-gtk qt6ct qt5ct kvantum breeze-icons
 ```
+
+---
+
+## Gerenciador de Monitores (Hyprland/Sway)
+
+```bash
+# Instalação via AUR
+yay -S monique
+```
+
+> [!note] O `monique` é um gerenciador gráfico de monitores com suporte a arrastar e soltar, perfis de configuração e daemon de hotplug. Foi testado e aprovado para uso com Hyprland.
+
+> [!warning] Segurança
+> Durante a instalação do monique no meu sistema, uma verificação foi feita no código fonte para garantir a integridade do sistema.
+
+**Para iniciar:**
+
+```bash
+monique
+```
+
+**Ativar o daemon (para detectar automaticamente monitores):**
+
+```bash
+systemctl --user enable --now moniqued
+```
+
 ---
 
 ## Wallpaper
@@ -198,8 +221,6 @@ hl.bind("ALT, L", hl.dsp.exec_cmd("hyprlock"))
 ---
 
 ## Menu de Energia / Desligamento
-
-
 
 ```bash
 sudo pacman -S nwg-bar
@@ -322,21 +343,25 @@ sudo pacman -S sof-firmware
 
 ## Pacotes que foram TESTADOS, mas REMOVIDOS
 
-| **Pacote**         | **Motivo da remoção**                       |
-| ------------------ | ------------------------------------------- |
-| `flameshot`        | Não funcionou bem no Wayland                |
-| `gnome-screenshot` | Não funcionou com interface interativa      |
-| `hyprpaper`        | Substituído pelo `swww` (melhor com escala) |
-| `trayer`           | Não encontrado nos repositórios oficiais    |
+|**Pacote**|**Motivo da remoção**|
+|---|---|
+|`flameshot`|Não funcionou bem no Wayland|
+|`gnome-screenshot`|Não funcionou com interface interativa|
+|`hyprpaper`|Substituído pelo `swww` (melhor com escala)|
+|`trayer`|Não encontrado nos repositórios oficiais|
 
 ---
 
-## Comando Único para Instalar TUDO
+## Comando Único para Instalar TUDO (Repositórios Oficiais)
 
 ```bash
 sudo pacman -S hyprland kitty nano noto-fonts ttf-jetbrains-mono-nerd nemo wofi eog mpv evince waybar pavucontrol adw-gtk3 xdg-desktop-portal xdg-desktop-portal-gtk qt6ct qt5ct kvantum breeze-icons swww sddm hyprlock nwg-bar grim slurp wl-clipboard networkmanager iwd network-manager-applet bluez bluez-utils blueman mpd mpc playerctl brightnessctl pamixer ttf-font-awesome python python-requests sof-firmware git base-devel firefox obsidian
-# AUR
-yay -S brave-bin visual-studio-code-bin
+```
+
+### Comando para AUR
+
+```bash
+yay -S brave-bin visual-studio-code-bin monique
 ```
 
 ---
