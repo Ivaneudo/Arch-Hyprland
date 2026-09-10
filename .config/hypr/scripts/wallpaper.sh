@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Caminho ABSOLUTO da sua imagem
-WALLPAPER="/home/ivaneudo/Images/Wallpaper/default.jpg"
+WALLPAPER="caminho/da/sua/imagem"
 
 # Aplica o wallpaper
-swaybg -o eDP-1 -i /home/ivaneudo/Images/Wallpaper/default.jpg -m fill &
+swaybg -o eDP-1 -i caminho/da/sua/imagem -m fill &
 
 chmod +x ~/.config/hypr/scripts/wallpaper.sh
